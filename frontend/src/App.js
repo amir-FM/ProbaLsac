@@ -1,11 +1,13 @@
 import React from "react"
 import "./main.css"
-import {Navbar, Bod} from "./components"
+import bg from "./deps/bg.png"
+import {Navbar, Bod, Footer} from "./components"
 export default function () {
     return (
         <div>
-        <Navbar />
-        <Bod />
+            <Navbar />
+            <Bod />
+            <Footer />
         </div>
     )
 }
