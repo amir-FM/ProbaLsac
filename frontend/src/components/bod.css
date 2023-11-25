@@ -4,10 +4,15 @@
 }
 
 #citat {
-    width: 592px;
+    display: flex;
+    padding: 27.425px 44.286px 28px 43.257px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-p {
+#citat > p {
+    width: 592px;
     color: #FFF;
     font-family: Inter;
     font-size: 36px;
@@ -15,4 +20,13 @@ p {
     font-weight: 600;
     line-height: 131.023%; /* 47.168px */
     letter-spacing: -0.18px;
+}
+
+p {
+}
+
+.Polls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
