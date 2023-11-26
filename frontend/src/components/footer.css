@@ -1,7 +1,5 @@
 .footer {
     background-color: #FF1F66;
-    position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
     color: white;
@@ -12,23 +10,15 @@
 .footer > ul {
     list-style: none;
     display: flex;
-    margin-top: 0.5rem;
-    justify-content: space-evenly;
-    margin-bottom: auto;
+    justify-content: center;
+    gap: 10rem;
+    padding-top: 0.4rem;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .footer > ul > li > svg {
     width: 2.5rem;
     height: 2.5rem;
     flex-shrink: 0;
-}
-
-#leftBound {
-    //margin-right: 12rem;
-    //margin-left: auto;
-}
-
-#rightBound {
-    //margin-left: 12rem;
-    //margin-right: auto;
 }

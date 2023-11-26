@@ -1,9 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
-body {
+.Bod {
     margin: 0;
     background-image: url("./deps/bg.png");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-position: right top;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100% auto;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    border: none;
+    text-decoration: none;
 }
