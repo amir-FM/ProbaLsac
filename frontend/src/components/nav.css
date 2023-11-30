@@ -23,9 +23,9 @@
     list-style: none;
 }
 
-.nav > ul > li > button{
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
+#btn {
+    margin-left: 1.25vw;
+    margin-right: 1.25vw;
     color: #04395E;
     float: right;
     font-family: Inter;
@@ -33,4 +33,9 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    background: #FFF;
+}
+
+#btn:hover {
+    background: rgba(0, 0, 0, 0.15);
 }
