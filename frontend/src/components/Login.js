@@ -9,7 +9,8 @@ export default function Login(props) {
     const schema = Yup.object().shape({
     email: Yup.string()
         .required("Email is a required field")
-        .email("Invalid email format"),
+        .email("Invalid email format")
+        .matches(/[a-zA-Z]+[\.\-_]?[a-zA-Z]+@gmail.com/, "Email needs to end in @gmail.com"),
     password: Yup.string()
         .required("Password is a required field")
         .min(8, "Password must be at least 8 characters")
