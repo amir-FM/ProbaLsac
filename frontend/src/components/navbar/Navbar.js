@@ -1,7 +1,7 @@
 import { useState } from "react"
-import logo from "../deps/logo.png"
+import logo from "./logo.png"
 import "./nav.css"
-import {Popup, Login, Register} from "./index.js"
+import {Popup, Login, Register} from "../index.js"
 import { useCookies } from "react-cookie"
 
 export default function Navbar () {

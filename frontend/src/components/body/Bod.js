@@ -1,7 +1,7 @@
 import React from "react"
 import "./bod.css"
-import Poll from "./Poll.js"
-import testoasa from "../deps/testoasa.png"
+import Poll from "../poll/Poll.js"
+import testoasa from "./assets/testoasa.png"
 
 export default function Bod () {
     return (

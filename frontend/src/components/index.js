@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "./Navbar.js"
-import Bod from "./Bod.js"
-import Footer from "./Footer.js"
-import Popup from "./Popup.js"
-import Login from "./Login.js"
-import Register from "./Register.js"
+import Navbar from "./navbar/Navbar.js"
+import Bod from "./body/Bod.js"
+import Footer from "./footer/Footer.js"
+import Popup from "./popup/Popup.js"
+import Login from "./login/Login.js"
+import Register from "./register/Register.js"
 
 export {Navbar, Bod, Footer, Popup, Login, Register}

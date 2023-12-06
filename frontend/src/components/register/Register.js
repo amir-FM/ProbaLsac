@@ -1,5 +1,5 @@
 import React from "react"
-import "./login.css"
+import "./register.css"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import axios from "axios"

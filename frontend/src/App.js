@@ -1,7 +1,6 @@
 import React from "react"
 import {useState} from "react"
 import "./main.css"
-import bg from "./deps/bg.png"
 import {Navbar, Bod, Footer, Popup, Login, Register} from "./components"
 
 export default function () {

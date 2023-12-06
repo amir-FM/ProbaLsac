@@ -1,8 +1,8 @@
 import React from "react"
 import "./footer.css"
-import igLogo from "../deps/insta.png"
-import fbLogo from "../deps/facebk.png"
-import twLogo from "../deps/twitch.png"
+import igLogo from "./assets/insta.png"
+import fbLogo from "./assets/facebk.png"
+import twLogo from "./assets/twitch.png"
 
 export default function Footer () {
     return (

@@ -1,6 +1,6 @@
 import React from "react"
 import "./popup.css"
-import xButton from "../deps/xButton.png"
+import xButton from "./assets/xButton.png"
 
 export default function Popup (props){
     return (props.trigger) ? (

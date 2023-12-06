@@ -1,6 +1,10 @@
 .Bod {
-    //overflow: auto;
-    //height: 2740px;
+    margin: 0;
+    background-image: url("./assets/bg.png");
+    background-repeat: repeat-y;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: 100% auto;
 }
 
 #citat {
