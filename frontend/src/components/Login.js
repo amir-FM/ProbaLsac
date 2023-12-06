@@ -3,8 +3,9 @@ import "./login.css"
 import { Formik } from "formik"
 import * as Yup from "yup"
 import axios from "axios"
+import  { useCookies } from "react-cookie"
 
-export default function Login() {
+export default function Login(props) {
     const schema = Yup.object().shape({
     email: Yup.string()
         .required("Email is a required field")
@@ -16,20 +17,22 @@ export default function Login() {
     });
 
     return (
+
         <div className="login">
             <Formik
                     validationSchema={schema}
                     initialValues={{ email: "", password: "" }}
                     onSubmit={(values) => {
-                    axios.post('http://localhost:5000/api/user', {
+                    axios.post('http://localhost:5000/api/user/login', {
                         email: values.email,
                         password: values.password
                     })
                     .then(function (response) {
-                        console.log(response);
+                        props.setCookie("user", response.data.token,{path: "/"});
+                        window.location.reload();
                     })
                     .catch(function (error) {
-                        console.log(error);
+                        alert(error.response.data.error);
                     });
                     }}
                 >

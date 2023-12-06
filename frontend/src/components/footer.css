@@ -17,7 +17,7 @@
     padding-right: 0;
 }
 
-.footer > ul > li > img {
+.footer > ul > li > a > img {
     width: 2.5rem;
     height: 2.5rem;
     flex-shrink: 0;

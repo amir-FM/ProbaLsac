@@ -26,23 +26,20 @@ export default function Login() {
                     validationSchema={schema}
                 initialValues={{ email: "", password: "", confirmPassword: "" }}
                     onSubmit={(values) => {
-                    alert(values);
-                    axios({
-                        method: 'post',
-                        url: 'http://localhost:5000/api/user',
-                        headers:{'Content-Type': 'application/json'},
-                        data: {
-                            email: values.email,
-                            password: values.password
-                        },
-                    })
-                        .then(response => {
-                            alert(response.data);
-                        })
-                        .catch(response => {
-                            alert(response.data);
-                        });
-                    }}
+                    console.log(JSON.stringify(values));
+                    console.log(values);
+                    axios.post('http://localhost:5000/api/user', {
+                    email: values.email,
+                    password: values.password
+                })
+                .then(function (response) {
+                    console.log(response);
+                    window.location.reload();
+                })
+                .catch(function (error) {
+                    alert(error.response.data.error);
+                });
+                }}
                 >
                     {({
                     values,
@@ -56,7 +53,7 @@ export default function Login() {
                         <div className="form">
                     {/* Passing handleSubmit parameter tohtml form onSubmit property */}
                         <form noValidate onSubmit={handleSubmit}>
-                            <span>Login</span>
+                            <span>Register</span>
                         {/* Our input html with passing formik parameters like handleChange, values, handleBlur to input properties */}
                             <input
                             type="email"

@@ -24,19 +24,6 @@ router.post("/", async(req, res) => {
     }
 });
 
-router.get("/", async(_, res) =>{
-    const usersData = await User.find();
-
-    let trimmedUsersData =[];
-    for(const user of usersData) {
-        trimmedUsersData.push({
-            email: user.email,
-            date: user.date
-        });
-    }
-    return res.status(200).send({success: true, data: trimmedUsersData});
-});
-
 router.post("/login", async(req, res) => {
     try {
 
@@ -50,7 +37,10 @@ router.post("/login", async(req, res) => {
             return res.status(200).send({success: true, token: userToLogin._id});
         }
 
-        return res.status(400).send({success: false});
+        return res.status(400).send({
+            success: false,
+            error: "Invalid username or email"
+        });
     }catch (e){
         return res.send({success: false, message: e.message});
     }
