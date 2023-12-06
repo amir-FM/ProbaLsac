@@ -26,19 +26,20 @@ export default function Login() {
                     validationSchema={schema}
                 initialValues={{ email: "", password: "", confirmPassword: "" }}
                     onSubmit={(values) => {
-                    // Alert the input values of the form that we filled
-                    const val = JSON.stringify(values);
+                    alert(values);
                     axios({
                         method: 'post',
                         url: 'http://localhost:5000/api/user',
                         headers:{'Content-Type': 'application/json'},
                         data: {
-                            email: val.email,
-                            password: val.password
+                            email: values.email,
+                            password: values.password
                         },
-                        responseType: 'stream'
                     })
                         .then(response => {
+                            alert(response.data);
+                        })
+                        .catch(response => {
                             alert(response.data);
                         });
                     }}

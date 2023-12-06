@@ -2,6 +2,7 @@ import React from "react"
 import "./login.css"
 import { Formik } from "formik"
 import * as Yup from "yup"
+import axios from "axios"
 
 export default function Login() {
     const schema = Yup.object().shape({
@@ -20,8 +21,16 @@ export default function Login() {
                     validationSchema={schema}
                     initialValues={{ email: "", password: "" }}
                     onSubmit={(values) => {
-                    // Alert the input values of the form that we filled
-                    alert(JSON.stringify(values));
+                    axios.post('http://localhost:5000/api/user', {
+                        email: values.email,
+                        password: values.password
+                    })
+                    .then(function (response) {
+                        console.log(response);
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
                     }}
                 >
                     {({
